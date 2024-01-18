@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 import keepPreset from "keep-react/preset";
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
   content: [
@@ -12,11 +14,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        'c-primary': '#00ADB5',
-        'c-accent': '#FF2E63',
-        'c-dark': '#252A34',
-        'c-light': '#EAEAEA'
+        'c-primary': 'var(--color-primary)',
+        'c-accent': 'var(--color-accent)',
+        'c-dark': 'var(--color-dark)',
+        'c-light': 'var(--color-light)',
+        'c-green': 'var(--color-green)',
+        'c-yellow': 'var(--color-yellow)',
+        'c-red': 'var(--color-red)',
+        'c-purple': 'var(--color-purple)',
+        'c-blue': 'var(--color-blue)',
       }
+    },
+    letterSpacing: {
+      tightest: '-0.13em',
     },
     fontFamily: {
       lexend: ['"Lexend Mega"', ...defaultTheme.fontFamily.sans]

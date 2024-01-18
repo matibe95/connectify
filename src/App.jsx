@@ -1,21 +1,15 @@
-import { Button } from 'keep-react'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Home } from './components/Home'
+import CreateLink from './components/CreateLink'
 
 function App() {
 
   return (
-    <>
-      <nav className='w-full'>
-        <ul className='flex justify-between'>
-          <li>
-            <i className='bx bx-link bx-lg'></i>
-          </li>
-          <li>
-          </li>
-        </ul>
-      </nav>
-            <a href="/" className='bg-c-primary px-4 py-3 text-dark font-medium custom-container rounded-md'>Comenzar</a>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:url" element={<CreateLink />} />
+    </Routes>
   )
 }
 

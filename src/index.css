@@ -5,19 +5,58 @@
 
 :root {
   font-family: Lexend Mega, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #252A34;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+* {
+  letter-spacing: -2px;
+}
 
+::-moz-selection {
+  background: var(--color-green);
+  color: var(--color-light);
+}
+
+::selection {
+  background: var(--color-green);
+  color: var(--color-light);
+}
+
+@layer base {
+  .light-mode {
+    --color-primary: #167cd1;
+    --color-accent: #fe95b3;
+    --color-dark: #252A34;
+    --color-border: #222;
+    --color-light: #f1f1f1;
+    --color-green: #064043;
+    --color-yellow: #FFDB58;
+    --color-red: #e6485e;
+    --color-purple: #C4A1FF;
+    --color-blue: #69D2E7;
+  }
+}
+
+.custom-container,
+.custom-container-without-border {
+  transition-property: box-shadow, transform;
+  transition-duration: .14s;
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
 }
 
 .custom-container {
-  border: 2px solid #000;
-  box-shadow: 2px 3px 0px 0px #000;
+  border: 2px solid var(--color-border);
+  box-shadow: 3px 4px 0px 0px var(--color-border);
+}
+
+.custom-container-without-border {
+  border: 2px solid var(--color-border);
+}
+
+.primary-animation:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 6px 6px 0px 0px var(--color-border);
 }
