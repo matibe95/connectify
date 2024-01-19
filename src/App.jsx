@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/:url" element={<CreateLink />} />
+      <Route path="/:profileName" element={<CreateLink />} />
     </Routes>
   )
 }

@@ -11,7 +11,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button,
+a {
   letter-spacing: -2px;
 }
 
@@ -52,6 +61,10 @@
   box-shadow: 3px 4px 0px 0px var(--color-border);
 }
 
+.custom-modal {
+  box-shadow: 3px 4px 0px 0px black;
+}
+
 .custom-container-without-border {
   border: 2px solid var(--color-border);
 }
@@ -59,4 +72,8 @@
 .primary-animation:hover {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow: 6px 6px 0px 0px var(--color-border);
+}
+
+.Toastify__toast-body {
+  letter-spacing: 0px !important;
 }

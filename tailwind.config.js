@@ -25,6 +25,9 @@ export default {
         'c-blue': 'var(--color-blue)',
       }
     },
+    animation: {
+      'spin-slow': 'spin 35s linear infinite',
+    },
     letterSpacing: {
       tightest: '-0.13em',
     },
