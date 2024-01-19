@@ -71,10 +71,10 @@ export const CreateLink = () => {
                     )
                 })
             }
-            <div className="flex justify-center w-full gap-4">
+            <div className="flex justify-center flex-col sm:flex-row w-full gap-4">
                 <button onClick={()=>openModal('add')} className='px-4 py-3 font-bold custom-container-without-border primary-animation bg-c-primary text-c-light'>Añadir Links</button>
                 <button onClick={()=>openModal('edit')} className='px-4 py-3 font-bold custom-container-without-border primary-animation bg-c-light text-c-dark'>Editar Perfil</button>
-                <button onClick={handleShareLink} className='px-4 py-3 font-bold custom-container-without-border primary-animation bg-c-light text-c-dark flex items-center gap-2'>
+                <button onClick={handleShareLink} className='px-4 py-3 font-bold custom-container-without-border primary-animation bg-c-light text-c-dark flex items-center gap-2 justify-center'>
                     Compartir Perfil
                     <i className='bx bxs-share-alt bx-sm'></i>
                 </button>
